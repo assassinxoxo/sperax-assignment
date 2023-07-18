@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# ERC20 Token Management App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React application that allows users to interact with ERC20 tokens on the Ethereum blockchain. It provides functionality to display the ERC20 token balance for a given Ethereum address and transfer ERC20 tokens to another address from connected metamask wallet.
 
-## Available Scripts
+## Demo
 
-In the project directory, you can run:
+### The ERC20 Token Management App is deployed on Vercel. You can access it [here](https://sperax-assignment-six.vercel.app/).
 
-### `npm start`
+## Supported ERC20 Information
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Token Name: `TST`
+- Network Name: `Polygon Mumbai Testnet`
+- Chain ID: `80001`
+- Contract Address: `0x25a583f7e0c7defe9d5abb09e84786f5566fe93f`    
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+### Clone the repository:
+    git clone https://github.com/assassinxoxo/sperax-assignment.git
+### Install dependencies:
+    cd sperax-assignment
+    npm install
+### Run the application:
+    npm start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Configuration
+### The ERC20 Token Management App uses a config.js file to define the contract and network settings. To modify the contract address and network, follow these steps:
 
-### `npm run build`
+- Open the src/config.js file in a text editor.
+- Update the network RPC URL with the RPC URL of your desired Ethereum network.
+- Update the contract address with the Ethereum address of your desired ERC20 token contract.
+- Update the contract ABI with the ABI of your desired ERC20 token contract.
+- Update the network with the name or ID of the Ethereum network you want to connect to (e.g., Mainnet, Ropsten, Rinkeby, Ploygon etc.).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Note: Make sure that the contract you're using is deployed on the specified network.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Node.js
+    - Install Node.js from [here](https://nodejs.org/en/download/)
+- MetaMask wallet
+  - Install MetaMask extension on your browser
+  
+## User Interface
 
-### `npm run eject`
+### The ERC20 Token Management App provides a user-friendly and visually appealing interface for interacting with ERC20 tokens. It follows a clean and simple design approach.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Display ERC20 Token Balance:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  - A form layout with a text input field for entering the Ethereum address.
+  - A "Submit" button to initiate the balance retrieval process.
+  - The fetched balance is prominently displayed on the screen using a visually appealing component such as a card or a large text element.
+  - An appropriate error message is displayed if the input is invalid.
+- Transfer ERC20 Tokens:
+  - A form layout with separate fields for entering the recipient's Ethereum address and the token amount.
+  - Real-time validation is implemented for the Ethereum address and token amount fields.
+  - An appropriate error message is displayed below each field if the inputs are invalid or if there are any transfer-related errors.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Screenshots
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Display ERC20 Token Balance
+![Alt text](image.png)
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Transfer ERC20 Tokens
+![Alt text](image-1.png)
