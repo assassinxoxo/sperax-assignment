@@ -86,7 +86,11 @@ const TransferTokenCard = ({
       );
     // check if all the form details are filled
     if (!tokenAmount || !recipientAddress)
-      return alert("Please fill all the form detials");
+      return showTransactionStatus(
+        "error",
+        "Please fill all the form details",
+        4000
+      );
     // check if recipient address is valid
     if (isAddress(recipientAddress)) {
       // send transaction
